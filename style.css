@@ -6,10 +6,8 @@
 }
 
 body {
-    /* พื้นหลังสไตล์ iOS (เปลี่ยนสีไปมาได้) */
-    background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
-    background-size: 200% 200%;
-    animation: gradientBG 10s ease infinite;
+    /* พื้นหลังสีกรมดำ (Dark Navy) */
+    background: linear-gradient(135deg, #0b1528 0%, #1e293b 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,23 +15,17 @@ body {
     padding: 20px;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* เอฟเฟกต์ Liquid Glass */
+/* เอฟเฟกต์ Liquid Glass โหมดมืด */
 .glass-container {
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(20px); /* ทำกระจกฝ้า */
-    -webkit-backdrop-filter: blur(20px); /* สำหรับ Safari/iOS */
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.05); /* ลดความสว่างของกระจก */
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); /* ขอบกระจกบางๆ */
     border-radius: 30px;
     padding: 40px 30px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* เงาสีดำ */
     text-align: center;
 }
 
@@ -41,7 +33,7 @@ h1 {
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 25px;
-    color: #333;
+    color: #f8fafc; /* เปลี่ยนสีตัวอักษรเป็นสีขาวนวล */
 }
 
 .input-group {
@@ -52,17 +44,21 @@ input[type="text"] {
     width: 100%;
     padding: 15px;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08); /* กล่อง input โปร่งแสง */
     font-size: 16px;
     outline: none;
     transition: all 0.3s;
-    color: #333;
+    color: #ffffff;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 input[type="text"]:focus {
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .button-group {
@@ -80,7 +76,7 @@ button {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 button:active {
@@ -88,52 +84,56 @@ button:active {
 }
 
 .btn-primary {
-    background: rgba(255, 255, 255, 0.4);
-    color: #333;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 .btn-danger {
-    background: rgba(255, 100, 100, 0.3);
-    color: #8c1010;
-    border: 1px solid rgba(255, 100, 100, 0.2);
+    background: rgba(239, 68, 68, 0.2); /* สีแดงโปร่งแสง */
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
 .btn-danger:hover {
-    background: rgba(255, 100, 100, 0.5);
+    background: rgba(239, 68, 68, 0.35);
 }
 
 .btn-install {
     margin-top: 20px;
     width: 100%;
-    background: linear-gradient(135deg, #007aff, #005bb5);
+    background: linear-gradient(135deg, #0ea5e9, #2563eb);
     color: white;
     border: none;
+    display: flex; /* จัดไอคอนกับข้อความให้อยู่ตรงกลาง */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 #result {
     font-size: 18px;
     font-weight: 500;
-    color: #444;
+    color: #e2e8f0;
     min-height: 24px;
 }
 
 .divider {
     height: 1px;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
     margin: 20px 0;
 }
 
 .badge {
     display: inline-block;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
-    color: #555;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
