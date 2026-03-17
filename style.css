@@ -6,7 +6,6 @@
 }
 
 body {
-    /* พื้นหลังสีกรมดำ (Dark Navy) */
     background: linear-gradient(135deg, #0b1528 0%, #1e293b 100%);
     min-height: 100vh;
     display: flex;
@@ -17,15 +16,15 @@ body {
 
 /* เอฟเฟกต์ Liquid Glass โหมดมืด */
 .glass-container {
-    background: rgba(255, 255, 255, 0.05); /* ลดความสว่างของกระจก */
+    background: rgba(255, 255, 255, 0.05); 
     backdrop-filter: blur(20px); 
     -webkit-backdrop-filter: blur(20px); 
-    border: 1px solid rgba(255, 255, 255, 0.1); /* ขอบกระจกบางๆ */
+    border: 1px solid rgba(255, 255, 255, 0.1); 
     border-radius: 30px;
     padding: 40px 30px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); /* เงาสีดำ */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3); 
     text-align: center;
 }
 
@@ -33,7 +32,7 @@ h1 {
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 25px;
-    color: #f8fafc; /* เปลี่ยนสีตัวอักษรเป็นสีขาวนวล */
+    color: #f8fafc; 
 }
 
 .input-group {
@@ -45,7 +44,7 @@ input[type="text"] {
     padding: 15px;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.08); /* กล่อง input โปร่งแสง */
+    background: rgba(255, 255, 255, 0.08); 
     font-size: 16px;
     outline: none;
     transition: all 0.3s;
@@ -94,7 +93,7 @@ button:active {
 }
 
 .btn-danger {
-    background: rgba(239, 68, 68, 0.2); /* สีแดงโปร่งแสง */
+    background: rgba(239, 68, 68, 0.2);
     color: #fca5a5;
     border: 1px solid rgba(239, 68, 68, 0.3);
 }
@@ -109,7 +108,7 @@ button:active {
     background: linear-gradient(135deg, #0ea5e9, #2563eb);
     color: white;
     border: none;
-    display: flex; /* จัดไอคอนกับข้อความให้อยู่ตรงกลาง */
+    display: flex; 
     justify-content: center;
     align-items: center;
     gap: 8px;
