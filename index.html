@@ -2,32 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Lab 10 Web Storage (Glass UI)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10 Web Storage (Dark Mode)</title>
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="glass-container">
         <h1>My Web Storage</h1>
-        
         <div class="input-group">
             <input type="text" id="username" placeholder="Enter your name">
         </div>
-        
         <div class="button-group">
-            <button class="btn-primary" onclick="saveName()">Save Name</button>
-            <button class="btn-danger" onclick="clearName()">Clear</button>
+            <button class="btn-save" onclick="saveName()">Save Name</button>
+            <button class="btn-clear" onclick="clearName()">Clear</button>
         </div>
+        <p id="result">Welcome back, New 👋</p>
+        <div class="visits-count" id="visitCount">Visited this tab 1 times</div>
         
-        <p id="result"></p>
-        
-        <div class="divider"></div>
-        
-        <p id="visitCount" class="badge"></p>
-
         <button id="installApp" class="btn-install" style="display: none;">
-            Install App (PWA)
+            <svg class="install-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM11 11V15H13V11H16L12 7L8 11H11Z" fill="white"/>
+            </svg>
+            Install App on Browser
         </button>
     </div>
     
